@@ -140,3 +140,10 @@ function uniqueGenres(mediaList) {
   const genres = mediaList.map((media) => media.genre);
   return [...new Set(genres)];
 }
+
+// funzione che filtra i film per genere e ritorna l'array dei toString
+function filterByGenre(mediaList, genre) {
+  return mediaList
+    .filter((media) => media.genre === genre)
+    .map((media) => media.toString());
+}
