@@ -122,3 +122,15 @@ const mediaInstances = media.map((item) => {
     );
   }
 });
+
+// console.log(mediaInstances.toString());
+
+// funzione che restituisce la media dei voti per un determinato genere
+function averageRatingByGenre(mediaList, genre) {
+  const filteredMedia = mediaList.filter((media) => media.genre === genre);
+  const totalRating = filteredMedia.reduce(
+    (sum, media) => sum + media.rating,
+    0
+  );
+  return totalRating / filteredMedia.length;
+}
