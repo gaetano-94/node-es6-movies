@@ -31,3 +31,54 @@ const media = [
     seasons: 4,
   },
 ];
+
+// classe Movie
+class Movie {
+  #title;
+  #year;
+  #genre;
+  #rating;
+  #type;
+  constructor(title, year, genre, rating, type) {
+    this.#title = title;
+    this.#year = year;
+    this.#genre = genre;
+    this.#rating = rating;
+    this.#type = type;
+  }
+  get title() {
+    return this.#title;
+  }
+  set title(value) {
+    this.#title = value;
+  }
+  get year() {
+    return this.#year;
+  }
+  set year(value) {
+    this.#year = value;
+  }
+  get genre() {
+    return this.#genre;
+  }
+  set genre(value) {
+    this.#genre = value;
+  }
+  get rating() {
+    return this.#rating;
+  }
+  set rating(value) {
+    this.#rating = value;
+  }
+  get type() {
+    return this.#type;
+  }
+  set type(value) {
+    this.#type = value;
+  }
+  toString() {
+    return `${this.#title} è un ${this.#type} di genere ${
+      this.#genre
+    }. E' stato rilasciato nel ${this.#year} ed ha un voto di ${this.#rating}.`;
+  }
+}
