@@ -132,7 +132,7 @@ function averageRatingByGenre(mediaList, genre) {
     (sum, media) => sum + media.rating,
     0
   );
-  return totalRating / filteredMedia.length;
+  return filteredMedia.length ? totalRating / filteredMedia.length : 0;
 }
 
 // funzione che restituisce la lista dei generi senza ripetizioni
@@ -154,4 +154,7 @@ console.log(
   averageRatingByGenre(mediaInstances, 'Drama')
 );
 console.log('Lista dei generi unici:', uniqueGenres(mediaInstances));
-console.log('Film di genere Drama:', filterByGenre(mediaInstances, 'Drama'));
+console.log(
+  'Film di genere Drama:',
+  filterByGenre(mediaInstances, 'Drama').join('\n')
+);
