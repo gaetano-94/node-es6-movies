@@ -180,3 +180,11 @@ class Cart {
     this.cartItems.forEach((item) => console.log(item.toString()));
   }
 }
+
+// utilizzo della classe Cart
+const cart = new Cart();
+cart.addItem(mediaInstances[0]);
+cart.addItem(mediaInstances[1]);
+console.log('Contenuto del carrello:');
+cart.printCart();
+console.log('Costo totale del noleggio:', cart.totalCost().toFixed(2));
