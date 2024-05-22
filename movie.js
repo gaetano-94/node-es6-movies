@@ -82,3 +82,27 @@ class Movie {
     }. E' stato rilasciato nel ${this.#year} ed ha un voto di ${this.#rating}.`;
   }
 }
+
+// classe TvSerie che estende Movie
+class TvSerie extends Movie {
+  #seasons;
+  constructor(title, year, genre, rating, type, seasons) {
+    super(title, year, genre, rating, type);
+    this.#seasons = seasons;
+  }
+  get seasons() {
+    return this.#seasons;
+  }
+  set seasons(value) {
+    this.#seasons = value;
+  }
+  toString() {
+    return `${this.title} è una serie tv di genere ${
+      this.genre
+    }. La prima stagione è stata rilasciata nel ${
+      this.year
+    } ed in totale sono state prodotte ${
+      this.#seasons
+    } stagioni. Ha un voto di ${this.rating}.`;
+  }
+}
