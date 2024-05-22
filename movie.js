@@ -147,3 +147,11 @@ function filterByGenre(mediaList, genre) {
     .filter((media) => media.genre === genre)
     .map((media) => media.toString());
 }
+
+// esecuzione delle varie funzioni e stampa dei risultati nel terminale
+console.log(
+  'Media dei voti per il genere Drama:',
+  averageRatingByGenre(mediaInstances, 'Drama')
+);
+console.log('Lista dei generi unici:', uniqueGenres(mediaInstances));
+console.log('Film di genere Drama:', filterByGenre(mediaInstances, 'Drama'));
