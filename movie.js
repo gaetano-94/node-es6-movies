@@ -158,3 +158,25 @@ console.log(
   'Film di genere Drama:',
   filterByGenre(mediaInstances, 'Drama').join('\n')
 );
+
+// classe Cart per salvare i film da noleggiare
+class Cart {
+  constructor() {
+    this.cartItems = [];
+  }
+  addItem(media) {
+    this.cartItems.push(media);
+  }
+  removeItem(media) {
+    const index = this.cartItems.indexOf(media);
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+    }
+  }
+  totalCost() {
+    return this.cartItems.length * 3.99;
+  }
+  printCart() {
+    this.cartItems.forEach((item) => console.log(item.toString()));
+  }
+}
