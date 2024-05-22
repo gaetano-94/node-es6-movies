@@ -106,3 +106,19 @@ class TvSerie extends Movie {
     } stagioni. Ha un voto di ${this.rating}.`;
   }
 }
+
+// nuovo array con istanze di Movie o TvSerie
+const mediaInstances = media.map((item) => {
+  if (item.type === 'movie') {
+    return new Movie(item.title, item.year, item.genre, item.rating, item.type);
+  } else if (item.type === 'tv') {
+    return new TvSerie(
+      item.title,
+      item.year,
+      item.genre,
+      item.rating,
+      item.type,
+      item.seasons
+    );
+  }
+});
