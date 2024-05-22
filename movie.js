@@ -134,3 +134,9 @@ function averageRatingByGenre(mediaList, genre) {
   );
   return totalRating / filteredMedia.length;
 }
+
+// funzione che restituisce la lista dei generi senza ripetizioni
+function uniqueGenres(mediaList) {
+  const genres = mediaList.map((media) => media.genre);
+  return [...new Set(genres)];
+}
